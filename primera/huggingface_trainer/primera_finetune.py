@@ -17,7 +17,7 @@ model_name = "allenai/PRIMERA"
 wandb.init(project="PRIMERA_HT_%s_4096_1024"%dataset_name)
 
 # load dataset
-dataset_all = load_dataset('json', data_files=data_path + '%s.json' % dataset_name, split='all')
+dataset_all = load_dataset('json', data_files=data_path + '%s.jsonl' % dataset_name, split='all')
 print("dataset all", len(dataset_all))
 
 dataset_train = dataset_all.filter(lambda s: s['label'] == 'train')

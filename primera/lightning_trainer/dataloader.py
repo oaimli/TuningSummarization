@@ -151,7 +151,7 @@ def collate_fn(batch):
 def get_dataloader_summ(
     args, tokenizer, split_name, num_workers, is_shuffle
 ):
-    dataset_all = load_dataset('json', data_files=args.data_path + '%s.json' % args.dataset_name, split='all')
+    dataset_all = load_dataset('json', data_files=args.data_path + '%s.jsonl' % args.dataset_name, split='all')
     print("%s all"%args.dataset_name, len(dataset_all))
 
     random.seed(args.rand_seed)# This is to control random selection of training and testing samples

@@ -2,7 +2,6 @@ import numpy as np
 import random
 import torch
 from transformers import LEDTokenizer, LEDForConditionalGeneration
-import jsonlines
 from datasets import load_dataset
 from nltk.tokenize import sent_tokenize
 
@@ -20,7 +19,7 @@ max_output_length = 1024
 beam_size = 5
 
 # load dataset
-dataset_all = load_dataset('json', data_files=data_path + '%s.json' % dataset_name, split='all')
+dataset_all = load_dataset('json', data_files=data_path + '%s.jsonl' % dataset_name, split='all')
 print("dataset all", len(dataset_all))
 dataset_test = dataset_all.filter(lambda s: s['label'] == 'test')
 dataset_test = dataset_test.shuffle(seed=42).select(range(36))

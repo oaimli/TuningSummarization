@@ -33,5 +33,5 @@ def loading_original_multinews():
 
 if __name__ == "__main__":
     samples = loading_original_multinews()
-    with jsonlines.open("multinews.json", "w") as writer:
+    with jsonlines.open("multinews.jsonl", "w") as writer:
         writer.write_all(samples)
