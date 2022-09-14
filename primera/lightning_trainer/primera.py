@@ -451,8 +451,7 @@ if __name__ == "__main__":
     parser.add_argument("--resume_ckpt", type=str, help="Path of a checkpoint to resume from", default=None)
     parser.add_argument("--data_path", type=str, default="../../datasets/")
     parser.add_argument("--dataset_name", type=str, default="multinews",
-                        choices=["multinews", "arxiv", "multixscience", "wcep_10", "wcep_100", "peersum_r",
-                                 "peersum_rc", "peersum_all", "peersum"])
+                        choices=["multinews"])
     parser.add_argument("--num_workers", type=int, default=4, help="Number of workers to use for dataloader")
     parser.add_argument("--batch_size", default=4, type=int)
     parser.add_argument("--max_length_input", default=4096, type=int)
