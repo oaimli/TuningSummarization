@@ -14,13 +14,12 @@ from pytorch_lightning.loggers import WandbLogger
 from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.callbacks import EarlyStopping
 
-
 from transformers import (
     LEDTokenizer,
-    LEDForConditionalGeneration,
-    get_dataloader_summ
+    LEDForConditionalGeneration
 )
 
+from dataloader import get_dataloader_summ
 
 import sys
 sys.path.append("../../")
