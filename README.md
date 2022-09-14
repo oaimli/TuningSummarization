@@ -5,4 +5,4 @@ Fine-tuning large pretrained models for abstractive text summarization using own
 Models below have been finetuned in this repository:
 |  Model   | Lightning Trainer | Huggingface Trainer | Paper link  | 
 |  :-:  | :-:  | :-:  | ----  |
-| PRIMERA  | :zap: | | https://arxiv.org/abs/2110.08499 |
+| PRIMERA  | :zap: | :zap: | https://arxiv.org/abs/2110.08499 |
